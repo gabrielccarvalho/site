@@ -1,10 +1,13 @@
 import React from 'react'
-import { Navbar } from '../containers'
+
+import { HomePage, Header } from '../containers'
+const { About } = HomePage
 
 const Home = () => {
   return (
     <>
-      <Navbar />
+      <Header />
+      <About />
     </>
   )
 }

@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Home } from './screens'
 
-function App() {
+function App () {
   return (
     <Router>
       <div className="App">
@@ -11,7 +11,7 @@ function App() {
         </Switch>
       </div>
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App
