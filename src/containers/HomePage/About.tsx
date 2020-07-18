@@ -17,26 +17,51 @@ const HeadingWrapper = styled.div`
   align-items: left;
 `
 
+const StyledWriting = styled(Text)`
+  overflow: hidden;
+  white-space: nowrap;
+`
+
 const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  ${StyledWriting} {
+    &:nth-child(1) {
+    animation: typing 3.5s steps(50, end);
+    animation-fill-mode: forwards;
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+      animation: secondTyping 3.5s steps(50, end);
+      animation-delay: 3.5s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes secondTyping {
+      0% {
+        width: 0;
+      }
+      1% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 1;
+        width: 100%;
+      }
+    }
+  }
 `
 
 const Title = styled(Heading)`
   text-align: left;
-`
-
-const StyledWriting = styled(Text)`
-  overflow: hidden;
-  white-space: nowrap;
-  
-  animation: typing 3.5s steps(50, end);
-
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
 `
 
 const Image = styled.img.attrs({ src: require('../../assets/about/me.png') })`
@@ -55,9 +80,9 @@ const About = () => {
           <StyledWriting size="mmd" weight="semiBold">
             I am a technology enthusiast, an IT student in the university of RN
             (UFRN) and a software developer.
-            <StyledWriting size="mmd" weight="semiBold">
-              Passionate about Javascript and Open Source.
-            </StyledWriting>
+          </StyledWriting>
+          <StyledWriting size="mmd" weight="semiBold">
+            Passionate about Javascript and Open Source.
           </StyledWriting>
         </TextWrapper>
       </HeadingWrapper>
