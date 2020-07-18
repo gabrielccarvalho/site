@@ -11,8 +11,9 @@ export const theme = {
     white: '#FFFFFF',
     whiteish: '#f8f8f2',
     black: '#121212',
-    darkGrey: '#282a36',
-    grey: '#D1D1D1',
+    draculaBlue: '#282a36',
+    darkGrey: '#202020',
+    grey: '#A9A9A9',
     transparent: 'transparent'
   },
   textWeights: {
