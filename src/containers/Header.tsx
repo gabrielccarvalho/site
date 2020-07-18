@@ -19,7 +19,7 @@ const Wrapper = styled.nav`
 const Image = styled.img.attrs({ src: require('../assets/header/fire.png') })`
   height: 50px;
   width: 50px;
-  margin: 20px 30px;
+  margin: 20px;
 `
 
 const Header = () => {
