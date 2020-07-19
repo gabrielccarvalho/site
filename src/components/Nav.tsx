@@ -13,18 +13,41 @@ const Line = styled.div`
   background-color: ${props => props.theme.colors.white};
 `
 
+const Background = styled.div<WrapperProps>`
+  background-color: ${props => props.theme.colors.darkGrey};
+  position: fixed;
+  right: -3000px;
+  top: -3000px;
+  width: 6000px;
+  height: 6000px;
+  animation: ${({ open }) => open ? '2s circle' : ''};
+  display: ${({ open }) => open ? 'unset' : 'none'};
+
+  @keyframes circle {
+    from {
+      clip-path: circle(0%);
+    }
+    to {
+      clip-path: circle(6000px);
+    }
+  }
+`
+
 const Wrapper = styled.div<WrapperProps>`
   margin-right: 30px;
   cursor: pointer;
 
   ${Line} {
     margin-top: 5px;
+    z-index: 999;
 
     &:nth-child(1) {
       transform: ${({ open }) => open ? 'rotate(45deg) translateY(200%)' : ''};
+      transition-duration: .8s;
     }
     &:nth-child(2) {
       transform: ${({ open }) => open ? 'rotate(-45deg) translateY(-200%)' : ''};
+      transition-duration: .8s;
     }
   }
 `
@@ -33,10 +56,13 @@ const Nav = () => {
   const [open, setOpen] = useState(false)
 
   return (
-    <Wrapper open={open} onClick={() => setOpen(!open)}>
-      <Line />
-      <Line />
-    </Wrapper>
+    <>
+      <Background open ={open}/>
+      <Wrapper open={open} onClick={() => setOpen(!open)}>
+        <Line />
+        <Line />
+      </Wrapper>
+    </>
   )
 }
 

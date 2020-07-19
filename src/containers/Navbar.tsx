@@ -22,7 +22,7 @@ const Image = styled.img.attrs({ src: require('../assets/header/fire.png') })`
   margin: 20px;
 `
 
-const Header = () => {
+const Navbar = () => {
   return (
     <Wrapper>
       <Link to="/"><Image /></Link>
@@ -31,4 +31,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default Navbar
