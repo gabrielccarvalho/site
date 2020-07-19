@@ -1,14 +1,13 @@
 import React from 'react'
 
 import { HomePage, Header } from '../containers'
-const { About, Skills } = HomePage
+const { About } = HomePage
 
 const Home = () => {
   return (
     <>
       <Header />
       <About />
-      <Skills />
     </>
   )
 }
