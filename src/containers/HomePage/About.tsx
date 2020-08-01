@@ -5,7 +5,7 @@ import { Heading, Text, SectionContainer } from '../../components'
 import { device } from '../../baseStylesResponsive'
 
 const Wrapper = styled(SectionContainer).attrs({
-  color: 'black',
+  color: 'background',
   transitions: { bottom: 'wave' }
 })`
   display: flex;

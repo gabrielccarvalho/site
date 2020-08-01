@@ -12,7 +12,7 @@ type Props = {
 }
 
 const textDefaultProps: Props = {
-  color: 'white',
+  color: 'foreground',
   shadow: false,
   size: 'md',
   aerated: false,
@@ -33,7 +33,7 @@ export type HeadingProps = Props & {align?: React.CSSProperties['textAlign']; as
 
 const headingDefaultProps: HeadingProps = {
   align: 'center',
-  color: 'white',
+  color: 'foreground',
   shadow: false,
   size: 'lg',
   as: 'h1',

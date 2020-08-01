@@ -2,18 +2,17 @@ import { createGlobalStyle } from 'styled-components'
 
 export const theme = {
   colors: {
-    red: '#ff5555',
-    purple: '#bd93f9',
-    yellow: '#f1fa8c',
-    lightBlue: '#2B75FF',
-    darkBlue: '#126CE3',
+    background: '#282a36',
+    selection: '#44475a',
+    foreground: '#f8f8f2',
+    comment: '#6272a4',
+    cyan: '#8be9fd',
     green: '#50fa7b',
-    white: '#FFFFFF',
-    whiteish: '#f8f8f2',
-    black: '#121212',
-    draculaBlue: '#282a36',
-    darkGrey: '#202020',
-    grey: '#A9A9A9',
+    orange: '#ffb86c',
+    pink: '#ff79c6',
+    purple: '#bd93f9',
+    red: '#ff5555',
+    yellow: '#f1fa8c',
     transparent: 'transparent'
   },
   textWeights: {
@@ -46,7 +45,7 @@ export const theme = {
 export const BaseStyle = createGlobalStyle`
 
   body, html {
-    background-color: ${theme.colors.black};
+    background-color: ${theme.colors.background};
     font-family: "Nunito", sans-serif;
     font-weight: 500;
     font-size: 14px !important;

@@ -10,12 +10,12 @@ const Line = styled.div`
   width: 25px;
   border-radius: 5px;
 
-  background-color: ${props => props.theme.colors.white};
+  background-color: ${props => props.theme.colors.foreground};
 `
 
 const Background = styled.div<WrapperProps>`
-  background-color: ${props => props.theme.colors.darkGrey};
-  position: fixed;
+  background-color: ${props => props.theme.colors.selection};
+  position: absolute;
   right: -3000px;
   top: -3000px;
   width: 6000px;
